@@ -79,8 +79,8 @@ data_frame_named[c(4, 6), c(2, 3, 5)]
 
 #Lab step #23 switch Lenny's rankings for Episodes II and V
 stored_ranking_two <- data_frame_named[2,4]
-data_frame_named[2,4] = data_frame_named[5,4]
-data_frame_named[5,4] = stored_ranking_two
+data_frame_named[2,4] <- data_frame_named[5,4]
+data_frame_named[5,4] <- stored_ranking_two
 
 #check out if that actually works
 View(data_frame_named)
@@ -91,8 +91,8 @@ Concatenated_rankings["III", "Penny"]
 
 #Lab step #25 switch back Lenny's rankings
 stored_ranking_swapped <- data_frame_named["II", "Lenny"]
-data_frame_named["II", "Lenny"] = data_frame_named["V", "Lenny"]
-data_frame_named["V", "Lenny"] = stored_ranking_swapped
+data_frame_named["II", "Lenny"] <- data_frame_named["V", "Lenny"]
+data_frame_named["V", "Lenny"] <- stored_ranking_swapped
 
 #check out if that actually works
 View(data_frame_named)
@@ -104,8 +104,8 @@ data_frame_named$Lenny[2]
 #Lab step #26 re-do switch from step 23
 
 stored_ranking_swapped_again <- data_frame_named$Lenny[2]
-data_frame_named$Lenny[2] = data_frame_named$Lenny[5]
-data_frame_named$Lenny[5] = stored_ranking_swapped_again
+data_frame_named$Lenny[2] <- data_frame_named$Lenny[5]
+data_frame_named$Lenny[5] <- stored_ranking_swapped_again
 
 #check to see if that worked
 View(data_frame_named)
