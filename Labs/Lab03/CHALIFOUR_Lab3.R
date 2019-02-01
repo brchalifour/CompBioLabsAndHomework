@@ -91,6 +91,12 @@ data_frame_named["III", "Penny"]
 Concatenated_rankings["III", "Penny"]
 
 #Lab step #25 switch back Lenny's rankings
+stored_ranking_swapped <- data_frame_named["II", "Lenny"]
+data_frame_named["II", "Lenny"] = data_frame_named["V", "Lenny"]
+data_frame_named["V", "Lenny"] = stored_ranking_swapped
+
+#check out if that actually works
+View(data_frame_named)
 
 #Testing out $ function
 data_frame_named$Lenny
@@ -98,9 +104,9 @@ data_frame_named$Lenny[2]
 
 #Lab step #26 re-do switch from step 23
 
-stored_ranking_swapped <- data_frame_named$Lenny[2]
+stored_ranking_swapped_again <- data_frame_named$Lenny[2]
 data_frame_named$Lenny[2] = data_frame_named$Lenny[5]
-data_frame_named$Lenny[5] = stored_ranking_swapped
+data_frame_named$Lenny[5] = stored_ranking_swapped_again
 
 #check to see if that worked
 View(data_frame_named)
