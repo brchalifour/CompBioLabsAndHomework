@@ -51,9 +51,8 @@ typeof(Concatenated_rankings)
 Episode_names <- c("I", "II", "III", "IV", "V", "VI", "VII")
 
 #Lab step #15 make a new data frame with column AND row names and adjust the cbind matrix to have names
-row.names(Episode_names)
 colnames(all_rankings) <- c("Self", "Penny", "Jenny", "Lenny", "Stewie")
-row.names(all_rankings) <- c("I", "II", "III", "IV", "V", "VI", "VII")
+row.names(all_rankings) = Episode_names
 data_frame_named <- data.frame(all_rankings, row.names = Episode_names, check.rows = FALSE, check.names = TRUE, fix.empty.names = TRUE, stringsAsFactors = default.stringsAsFactors())
 Concatenated_rankings <- cbind(all_rankings)
 
