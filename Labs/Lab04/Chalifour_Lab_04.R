@@ -101,9 +101,9 @@ abundance <- rep(2500, 12)
 t <- 1
 r <- 0.8
 K <- 10000
-n <- rep(2500, 12)
+n <- abundance
 
-for (t in 2:12){
+for (t in 2:time){
   # Population_Abundance <- Current_Time_Abundance + (Intrinsic_Growth_Rate * Current_Time_Abundance * (Carrying_Capacity - Current_Time_Abundance)/Carrying_Capacity)
   n[t] = n[t-1] + ( r * n[t-1] * (K - n[t-1])/K )
 }
