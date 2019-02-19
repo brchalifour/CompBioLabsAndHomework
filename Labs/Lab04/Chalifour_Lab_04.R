@@ -47,8 +47,9 @@ t <- 1
 r <- 0.8
 K <- 10000
 n <- rep(2500, 12)
+end_time <- 12
 
-for (t in 2:12){
+for (t in 2:end_time){
   # Population_Abundance <- Current_Time_Abundance + (Intrinsic_Growth_Rate * Current_Time_Abundance * (Carrying_Capacity - Current_Time_Abundance)/Carrying_Capacity)
   n[t] = n[t-1] + ( r * n[t-1] * (K - n[t-1])/K )
 }
@@ -87,9 +88,8 @@ print(Fibonacci_zeros)
 
 # Lab step 7 - redo of lab step 4
 # use parameters to pre-allocate data storage
-time <- 1:12
 abundance <- rep(2500, 12)
-
+time <- 1:12
 # Use the discrete time logistic growth equation to predict population abundance
 # logistic growth equation is n[t] = n[t-1] + ( r * n[t-1] * (K - n[t-1])/K )
 # Time points 1 - 12
@@ -102,8 +102,9 @@ t <- 1
 r <- 0.8
 K <- 10000
 n <- abundance
+end_time <- 12
 
-for (t in 2:time){
+for (t in 2:end_time){
   # Population_Abundance <- Current_Time_Abundance + (Intrinsic_Growth_Rate * Current_Time_Abundance * (Carrying_Capacity - Current_Time_Abundance)/Carrying_Capacity)
   n[t] = n[t-1] + ( r * n[t-1] * (K - n[t-1])/K )
 }
