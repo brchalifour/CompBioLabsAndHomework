@@ -24,7 +24,6 @@ Labdata <- read.csv("Vector1.csv")
 # Change data frame into vector
 LabVector <- as.vector(t(Labdata))
 str(LabVector)
-VecRows <- nrow(Labdata)
 
 # Check vector data for negative numbers and replace with "NA" 
 for ( i in 1:length(LabVector) ) {
@@ -53,7 +52,7 @@ RangeValues
 # This vector should be named "FiftyToOneHundred"
 
 FiftyToOneHundred <- (LabVector[RangeValues])
-str(FiftyToOneHundred)
+length(FiftyToOneHundred)
 
 # Save range values to a .csv file
 getwd()
@@ -72,7 +71,7 @@ NonZeroGas <- which( CarbonData$Gas > 0)
 CarbonData$Year[135]
 
 # the first non-zero gas year was 1885
-print(CarbonData$Year[135])
+print(CarbonData$Year[NonZeroGas[1]])
 
 # During which years were "Total" emissions between 200 and 300 million metric tons of Carbon?
 
