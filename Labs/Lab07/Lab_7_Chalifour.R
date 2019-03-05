@@ -19,10 +19,22 @@ myAbs <- function(vector) {
   return(abs_vector)
 }
 
+
+# Second function from class example - added later
+myAbs2 <- function( x ) {
+  x[which(x < 0)] <- -x[which(x < 0)]
+    #change negative values of x
+  return( x )
+    #now return the whole vector
+}
+
 # Test this function with these values, they work!
 myAbs(5)
 myAbs(-2.3)
 myAbs(c(1.1, 2, 0, -4.3, 9, -12))
+
+# Test the other function
+myAbs2(c(1.1, 2, 0, -4.3, 9, -12, NA, -2.9))
 
 # Make a function to return vector of Fibonacci numbers of length n and 
 # starting value of either 0 or 1
