@@ -100,20 +100,12 @@ view(Least_sq_reg_speed_DF)
 # P-values significant to <0.001
 # Consistent with paper? Yes
 
-# Create data frame with relevant values from least squares regression
-Least_sq_reg_sin_DF <- data.frame(summary(model2)$coefficients)
-view(Least_sq_reg_DF)
-
-# Interpretation: As snails become more specialized, their sinuousity is significantly reduced, controlling for their log-10 body mass.
-# P-values significant to <0.05
-# Consistent with paper? Yes
-
 # run linear regression for log-transformed foot mass against habitat specialization (PDI)
 foot_vs_PDI <- lm(Foot_dry_mass_mg ~ PDI, data = newsnail)
 summary(foot_vs_PDI)
 
 # Interpretation: As species become more highly specialized, their foot mass decreases (they have smaller feet)
-# Consistent with papers conclusions? Yes
+# Consistent with papers conclusions? Yes, significant to p-value < 0.05. 
 
 # Plot log-transformed foot mass against PDI, compare trends to paper
 ggplot(newsnail, aes(x = PDI, y = Foot_dry_mass_mg)) + 
